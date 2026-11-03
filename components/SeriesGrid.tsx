@@ -12,7 +12,7 @@ export function SeriesGrid() {
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">What we supply</p>
-          <h2>Shop by series</h2>
+          <h2>Our comprehensive product range</h2>
           <p>Each series groups bolts by head style and application. Click a series to filter the catalog.</p>
         </div>
         <div className="series__grid">

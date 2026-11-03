@@ -1,33 +1,34 @@
 import Image from "next/image";
-import { SERIES_PHOTO } from "@/lib/products";
+import { HERO_BG, HERO_TILES, SERIES_PHOTO } from "@/lib/products";
 
-const apps = [
-  { title: "Solar racking", note: "T-bolts for PV mounting rails", photo: SERIES_PHOTO.tbolt },
-  { title: "Marine & coastal", note: "316 grade for salt-air exposure", photo: SERIES_PHOTO.square },
-  { title: "Machine frames", note: "Carriage and flange bolts for panels", photo: SERIES_PHOTO.carriage },
+const industries = [
+  { title: "Solar & Renewables", note: "T-bolts for PV mounting rails", photo: SERIES_PHOTO.tbolt },
+  { title: "Marine & Coastal", note: "316 grade for salt-air exposure", photo: HERO_TILES.acorn },
+  { title: "Machine Building", note: "Carriage and flange bolts for frames", photo: SERIES_PHOTO.carriage },
+  { title: "Construction", note: "Anchor bolts for concrete foundations", photo: SERIES_PHOTO.anchor },
+  { title: "Electronics", note: "Hex spacers for panels and PCBs", photo: HERO_TILES.spacer },
+  { title: "Maintenance & MRO", note: "Mixed stock for repair crews", photo: HERO_BG },
 ];
 
 export function Applications() {
   return (
-    <section className="applications">
-      <div className="container applications__inner">
-        <div className="applications__intro">
-          <p className="eyebrow eyebrow--light">Where they are used</p>
-          <h2>Built for demanding sites.</h2>
-          <p>From solar farms to coastal plants, the right grade and thread keep assemblies tight for years.</p>
-          <a href="#catalog" className="btn btn--light">View full catalog</a>
-        </div>
-        <div className="applications__cards">
-          {apps.map((a) => (
-            <article key={a.title} className="app-card">
-              <div className="app-card__img">
-                <Image src={a.photo} alt="" fill sizes="(max-width: 900px) 100vw, 30vw" />
+    <section className="industries" id="industries">
+      <div className="container">
+        <h2 className="center-title">Solutions tailored for your industry</h2>
+        <div className="industries__grid">
+          {industries.map((a) => (
+            <article key={a.title} className="industry-card">
+              <Image src={a.photo} alt="" fill sizes="(max-width: 900px) 100vw, 33vw" />
+              <div>
+                <h3>{a.title}</h3>
+                <p>{a.note}</p>
               </div>
-              <h3>{a.title}</h3>
-              <p>{a.note}</p>
             </article>
           ))}
         </div>
+        <p className="center">
+          <a href="#catalog" className="btn btn--primary">Explore industry applications</a>
+        </p>
       </div>
     </section>
   );

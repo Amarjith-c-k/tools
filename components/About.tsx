@@ -1,37 +1,33 @@
 import Image from "next/image";
-import { PRODUCTS, SERIES, SERIES_PHOTO } from "@/lib/products";
+import { HERO_TILES, SERIES_PHOTO } from "@/lib/products";
 
 export function About() {
-  const grades = new Set(PRODUCTS.flatMap((p) => p.grades)).size;
-  const stats = [
-    { value: String(PRODUCTS.length), label: "Core products" },
-    { value: String(SERIES.length), label: "Product series" },
-    { value: String(grades), label: "Stainless grades" },
-  ];
-
   return (
     <section className="about" id="about">
-      <div className="container about__inner">
+      <div className="about__band">
+        <div className="container about__head">
+          <span className="about__squares" aria-hidden="true"><i /><i /></span>
+          <div>
+            <p className="kicker">About FastenPro</p>
+            <h2>Building a trusted fasteners brand.</h2>
+          </div>
+        </div>
+      </div>
+      <div className="container about__body">
+        <figure className="about__img">
+          <Image src={SERIES_PHOTO.anchor} alt="Anchor bolt with nut and washer" fill sizes="(max-width: 900px) 100vw, 32vw" />
+        </figure>
         <div className="about__copy">
-          <p className="eyebrow">About us</p>
-          <h2>More than a parts catalog.</h2>
           <p>
-            We supply stainless steel fasteners in the sizes and standards your drawings call for, with clear specs on
-            every listing and one quote for the whole list.
+            FastenPro was founded to deliver dependable stainless fastening for the industries that build, power and
+            move the region. With stock in 304 and 316 grade and a supply network across the GCC, Europe and Africa, we
+            set a high bar for quality, service and lead times.
           </p>
-          <a href="#contact" className="btn btn--primary">Talk to our team</a>
+          <a href="#contact" className="btn btn--dark">Learn more about us</a>
         </div>
-        <div className="about__media">
-          <Image src={SERIES_PHOTO.anchor} alt="Anchor bolt" fill sizes="(max-width: 900px) 100vw, 40vw" />
-        </div>
-        <ul className="about__stats">
-          {stats.map((s) => (
-            <li key={s.label}>
-              <strong>{s.value}</strong>
-              <span>{s.label}</span>
-            </li>
-          ))}
-        </ul>
+        <figure className="about__img about__img--small">
+          <Image src={HERO_TILES.acorn} alt="Stainless acorn nuts" fill sizes="20vw" />
+        </figure>
       </div>
     </section>
   );

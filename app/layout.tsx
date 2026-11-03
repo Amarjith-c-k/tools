@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { StoreProvider } from "@/components/store";
 import { TopBar } from "@/components/TopBar";
@@ -8,8 +8,7 @@ import { Footer } from "@/components/Footer";
 import { ProductDialog } from "@/components/ProductDialog";
 import { QuoteDrawer } from "@/components/QuoteDrawer";
 
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-const serif = DM_Serif_Display({ variable: "--font-serif", weight: "400", style: ["normal", "italic"], subsets: ["latin"] });
+const poppins = Poppins({ variable: "--font-poppins", weight: ["400", "500", "600", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "FastenPro | Stainless Bolts, T-Bolts & Anchor Bolts",
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${serif.variable}`}>
+    <html lang="en" className={poppins.variable}>
       <body>
         <StoreProvider>
           <TopBar />
