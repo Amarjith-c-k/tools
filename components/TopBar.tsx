@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE } from "@/lib/products";
 
 export function TopBar() {
@@ -5,15 +6,10 @@ export function TopBar() {
     <div className="topbar">
       <div className="container topbar__inner">
         <a href="#top" className="logo" aria-label="Home">
-          <span className="logo__mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z" /></svg>
-          </span>
-          <span className="logo__text">
-            FastenPro<small>Precision in every thread</small>
-          </span>
+          <Image src="/logo.png" alt={SITE.company} width={230} height={33} priority />
         </a>
         <span className="topbar__contact">
-          <span>{SITE.city}</span>
+          <span>{SITE.address}</span>
           <a href={`tel:${SITE.phone.replace(/\s/g, "")}`}>{SITE.phone}</a>
         </span>
       </div>

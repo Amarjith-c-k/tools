@@ -34,7 +34,7 @@ export function QuoteForm() {
           <p>Add items from the catalog, then tell us who to reply to. Our sales team usually responds within one working day.</p>
           <ul className="contact__list">
             <li><strong>Sales</strong> {SITE.email}</li>
-            <li><strong>Phone</strong> +00 000 000 0000</li>
+            <li><strong>Phone</strong> {SITE.phone}</li>
             <li><strong>Hours</strong> Mon to Fri, 9:00 to 18:00</li>
           </ul>
         </div>

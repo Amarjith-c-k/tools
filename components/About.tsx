@@ -8,7 +8,7 @@ export function About() {
         <div className="container about__head">
           <span className="about__squares" aria-hidden="true"><i /><i /></span>
           <div>
-            <p className="kicker">About FastenPro</p>
+            <p className="kicker">About TorqueConnect</p>
             <h2>Building a trusted fasteners brand.</h2>
           </div>
         </div>
@@ -19,9 +19,9 @@ export function About() {
         </figure>
         <div className="about__copy">
           <p>
-            FastenPro was founded to deliver dependable stainless fastening for the industries that build, power and
-            move the region. With stock in 304 and 316 grade and a supply network across the GCC, Europe and Africa, we
-            set a high bar for quality, service and lead times.
+            TorqueConnect was founded with a single goal: to deliver world-class fastening and assembly solutions that power
+            industries of the future. Based in the Middle East with a strong supply network across GCC, Europe and Africa,
+            we set new benchmarks in product quality, customer service and global accessibility.
           </p>
           <a href="#contact" className="btn btn--dark">Learn more about us</a>
         </div>

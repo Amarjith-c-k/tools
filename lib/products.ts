@@ -65,4 +65,11 @@ export const HERO_TILES = {
 // Full-width hero background: stainless assortment case (Wikimedia Commons).
 export const HERO_BG = "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Dornbirn-A4_Screws_assortment-01ASD.jpg/1920px-Dornbirn-A4_Screws_assortment-01ASD.jpg";
 
-export const SITE = { company: "FastenPro", email: "sales@example.com", phone: "+00 000 000 0000", city: "Dubai" };
+export const SITE = {
+  company: "TorqueConnect",
+  tagline: "Precision in every turn, strength in every connection",
+  email: "sales@torqueconnect.com",
+  phone: "+971 524593044",
+  address: "Dubai Investment Park - 1, Dubai, UAE",
+  hours: "Mon to Fri, 9:00 to 18:00",
+};

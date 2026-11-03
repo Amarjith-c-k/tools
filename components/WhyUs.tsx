@@ -16,7 +16,7 @@ export function WhyUs() {
           <Image src={HERO_TILES.lock} alt="Nylon lock nuts" fill sizes="25vw" />
         </figure>
         <div className="why-us__copy">
-          <p className="kicker">Why FastenPro?</p>
+          <p className="kicker">Why TorqueConnect?</p>
           <h2>Your partner in high-performance engineering.</h2>
           <p>
             We do more than supply parts. Our stainless fasteners are chosen by production lines for their consistency,

@@ -291,6 +291,8 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -.01em; }
 .logo__mark svg { width: 24px; height: 24px; }
 .logo__text { font-size: 1.7rem; letter-spacing: -.01em; }
 .logo__text small { color: #bbb; font-size: .62rem; letter-spacing: .2em; margin-top: .2rem; }
+.topbar .logo { background: #fff; border-radius: 12px; padding: .45rem .9rem; }
+.topbar .logo img { width: 230px; height: auto; }
 
 /* Red nav bar */
 .header { background: var(--accent); border-bottom: 0; box-shadow: 0 4px 14px rgba(0, 0, 0, .15); }
@@ -431,8 +433,8 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -.01em; }
 .footer__cols a, .footer__cols p { display: block; color: #ccc; text-decoration: none; font-size: .9rem; margin: 0 0 .6rem; }
 .footer__cols a:hover { color: #fff; }
 .footer__brandrow { display: flex; justify-content: center; margin: 3rem auto 2rem; }
-.footer__brandrow .logo__mark { width: 64px; height: 64px; }
-.footer__brandrow .logo__text { font-size: 2.6rem; }
+.footer__brandrow img { width: min(460px, 80%); height: auto; }
+.footer__brandrow { background: #fff; border-radius: 18px; padding: 1.5rem 2rem; width: fit-content; max-width: calc(100% - 32px); }
 .footer__legal { color: #888; font-size: .75rem; text-align: center; }
 
 @media (max-width: 1000px) {
@@ -466,7 +468,8 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -.01em; }
   .insight-card__img { height: 140px; }
   .testimonials__box { grid-template-columns: 1fr; }
   .testimonials__box button { display: none; }
-  .footer__brandrow .logo__text { font-size: 1.8rem; }
+  .footer__brandrow img { width: 90%; }
+  .topbar .logo img { width: 180px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
